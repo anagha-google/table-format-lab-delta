@@ -4,7 +4,7 @@
 
 ```
 cd ~
-git clone https://github.com/anagha-google/spark-delta-lake-lab
+git clone https://github.com/anagha-google/table-format-lab-delta
 ```
 
 ## Variables
@@ -33,7 +33,7 @@ echo "LOCATION=$LOCATION"
 ### 1. Enable Google APIs and Update Organization Policies
 
 ```
-cd ~/spark-delta-lake-lab/org_policy
+cd ~/table-format-lab-delta/org_policy
 terraform init
 ```
 
@@ -47,7 +47,7 @@ terraform apply \
 ### 2. Provision the lab resources
 
 ```
-cd ~/spark-delta-lake-lab/demo
+cd ~/table-format-lab-delta/demo
 terraform init
 ```
 
