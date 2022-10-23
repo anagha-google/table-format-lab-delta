@@ -7,7 +7,9 @@ cd ~
 git clone https://github.com/anagha-google/table-format-lab-delta
 ```
 
-## Variables
+<hr>
+
+## Declare Variables
 
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
@@ -28,6 +30,8 @@ echo "YOUR_GCP_MULTI_REGION=$YOUR_GCP_MULTI_REGION"
 echo "LOCATION=$LOCATION"
 ```
 
+<hr>
+
 ## Terraform Provisioning
 
 ### 1. Enable Google APIs and Update Organization Policies
@@ -43,6 +47,7 @@ terraform apply \
   --auto-approve
 ```
 
+<hr>
 
 ### 2. Provision the lab resources
 
@@ -70,6 +75,7 @@ terraform apply \
   --auto-approve
  ```
 
+<hr>
 
 ### 3. Create an interactive Spark session
 
@@ -97,3 +103,48 @@ gcloud beta dataproc sessions create spark $SESSION_NAME-$RANDOM  \
 --subnet=$SUBNET 
 
 ```
+The author typcially has two sessions handly to expedite switching across notebooks.
+
+<hr>
+
+### 4. Connect to Vertex AI Workbench in the Cloud Console
+
+The Terraform creates a Vertex AI Workbench managed notebook instance and loads the Delta Lake notebooks.
+Navigate into the managed notbook instance open the first Delta Lake notebook and pick a Spark kernel - the one created by #3 above.
+
+<hr>
+
+### 5. Get started with the Delta Lake lab
+
+Run through each notebook, sequentially.<br>
+Review the Delta Lake documentation at - <br>
+https://docs.delta.io/latest/index.html <br>
+
+## 6. Dont forget to 
+Shut down/delete resources when done to avoid unnecessary billing.
+
+<hr>
+
+## 7. Credits
+| # | Google Cloud Collaborators | Contribution  | 
+| -- | :--- | :--- |
+| 1. | Anagha Khanolkar | Creator |
+
+<hr>
+
+## 8. Contributions welcome
+Community contribution to improve the lab is very much appreciated. <br>
+
+<hr>
+
+## 9. Getting help
+If you have any questions or if you found any problems with this repository, please report through GitHub issues.
+
+<hr>
+
+## 10. Release History
+
+| Date | Details | 
+| -- | :--- | 
+| 20221022 |  Notebooks 1-9, + Terraform |
+
