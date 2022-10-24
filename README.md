@@ -116,15 +116,19 @@ The author typcially has two sessions handly to expedite switching across notebo
 ### 2.5. Connect to Vertex AI Workbench in the Cloud Console
 
 The Terraform creates a Vertex AI Workbench managed notebook instance and loads the Delta Lake notebooks.
-Navigate into the managed notbook instance open the first Delta Lake notebook and pick a Spark kernel - the one created by #3 above.
+Navigate into the managed notebook instance, open the first Delta Lake notebook, and pick a Spark kernel - the one created by #3 above.
 
 <hr>
 
 ### 2.6. Get started with the Delta Lake lab
 
+Delta Lake has a number of features. Only a subset has been covered in this lab. Over time, we will add more notebooks.<br>
+
 Run through each notebook, sequentially.<br>
 Review the Delta Lake documentation at - <br>
 https://docs.delta.io/latest/index.html <br>
+
+**Note:** Table clones are not yet availabe outside Databricks - https://github.com/delta-io/delta/issues/1387. Therefore, notebook 8, does not work, its been left as a placeholder.
 
 ## 3. Dont forget to 
 Shut down/delete resources when done to avoid unnecessary billing.
