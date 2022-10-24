@@ -1,6 +1,12 @@
-# Spark on GCP: Delta Lake Lab 
+# Delta Lake Lab with Spark on GCP powered by Dataproc Serverless 
 
-## Clone this repo
+## 1. About the lab
+
+
+
+## 2. Delta Lake Lab
+
+### 2.1. Clone this repo
 
 ```
 cd ~
@@ -9,7 +15,7 @@ git clone https://github.com/anagha-google/table-format-lab-delta
 
 <hr>
 
-## Declare Variables
+### 2.2. Declare Variables
 
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
@@ -32,9 +38,9 @@ echo "LOCATION=$LOCATION"
 
 <hr>
 
-## Terraform Provisioning
+### 2.3. Terraform Provisioning
 
-### 1. Enable Google APIs and Update Organization Policies
+#### 2.3.1. Enable Google APIs and Update Organization Policies
 
 ```
 cd ~/table-format-lab-delta/org_policy
@@ -49,7 +55,7 @@ terraform apply \
 
 <hr>
 
-### 2. Provision the lab resources
+#### 2.3.2. Provision the lab resources
 
 ```
 cd ~/table-format-lab-delta/demo
@@ -77,7 +83,7 @@ terraform apply \
 
 <hr>
 
-### 3. Create an interactive Spark session
+### 2.4. Create an interactive Spark session
 
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
@@ -107,42 +113,42 @@ The author typcially has two sessions handly to expedite switching across notebo
 
 <hr>
 
-### 4. Connect to Vertex AI Workbench in the Cloud Console
+### 2.5. Connect to Vertex AI Workbench in the Cloud Console
 
 The Terraform creates a Vertex AI Workbench managed notebook instance and loads the Delta Lake notebooks.
 Navigate into the managed notbook instance open the first Delta Lake notebook and pick a Spark kernel - the one created by #3 above.
 
 <hr>
 
-### 5. Get started with the Delta Lake lab
+### 2.6. Get started with the Delta Lake lab
 
 Run through each notebook, sequentially.<br>
 Review the Delta Lake documentation at - <br>
 https://docs.delta.io/latest/index.html <br>
 
-## 6. Dont forget to 
+## 3. Dont forget to 
 Shut down/delete resources when done to avoid unnecessary billing.
 
 <hr>
 
-## 7. Credits
+## 4. Credits
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
 | 1. | Anagha Khanolkar | Creator |
 
 <hr>
 
-## 8. Contributions welcome
+## 5. Contributions welcome
 Community contribution to improve the lab is very much appreciated. <br>
 
 <hr>
 
-## 9. Getting help
+## 6. Getting help
 If you have any questions or if you found any problems with this repository, please report through GitHub issues.
 
 <hr>
 
-## 10. Release History
+## 7. Release History
 
 | Date | Details | 
 | -- | :--- | 
