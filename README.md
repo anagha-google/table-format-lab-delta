@@ -43,7 +43,7 @@ echo "LOCATION=$LOCATION"
 #### 2.3.1. Enable Google APIs and Update Organization Policies
 
 ```
-cd ~/table-format-lab-delta/org_policy
+cd ~/table-format-lab-delta/00-setup/org_policy
 terraform init
 ```
 
@@ -58,7 +58,7 @@ terraform apply \
 #### 2.3.2. Provision the lab resources
 
 ```
-cd ~/table-format-lab-delta/demo
+cd ~/table-format-lab-delta/00-setup/demo
 terraform init
 ```
 
