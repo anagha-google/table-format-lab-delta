@@ -1,8 +1,14 @@
-# Delta Lake Lab with Spark on GCP powered by Dataproc Serverless 
+# Delta Lake with Spark on GCP powered by Dataproc Serverless 
+
+## Delta Lake in a nutshell
+Delta Lake is an open source table format that brings relational database & warehouse like capabilities such as ACID transactions, CRUD operations, schema validation + enforcement + evolution & more to structured data assets in data lakes. Learn more at [delta.io](https://delta.io)
 
 ## 1. About the lab
+This lab aims to demystify Delta Lake on Dataproc Serverless Spark on GCP, with a minimum viable sample of the core features of the table format on a Data Lake on Cloud Storage. The dataset leveraged is the Kaggle Lending Club loan dataset, and the lab features a set of nine Spark notebooks, each covering a feature or a set of features. The lab is fully scripted (no challenges) and is for pure instructional purpose. 
 
+<br>
 
+The lab includes Terraform automation for GCP environment provisioning. 
 
 ## 2. Delta Lake Lab
 
@@ -16,6 +22,8 @@ git clone https://github.com/anagha-google/table-format-lab-delta
 <hr>
 
 ### 2.2. Declare Variables
+
+Modify the location variable to your preferred GCP region.
 
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
