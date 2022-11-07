@@ -24,7 +24,8 @@ The lab includes Terraform automation for GCP environment provisioning and detai
 1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.x (Dataproc Sercerless Spark version 2.0)
 2. Delta Lake - delta-core_2.13:2.1.0
 
-### A5. Lab architecture
+### A5. Lab Architecture
+The lab architecture is as follows-
 
 
 ### A6. Lab Flow
@@ -44,7 +45,6 @@ Data engineering for Loan analysis
 2. Just enough knowledge of using Delta Lake with Dataproc Serverless Spark on GCP via Jupyter notebooks on Vertex AI Workbench managed notebooks
 3. Ability to demo Delta Lake on Dataproc Serverless Spark 
 4. Just enough Terraform for automating provisioning, that can be repurposed for your workloads
-
 
 ### A9. Duration to run through the lab
 ~ 90 minutes or less
