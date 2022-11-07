@@ -1,18 +1,66 @@
 # Delta Lake with Spark on GCP powered by Dataproc Serverless 
 
-## Delta Lake in a nutshell
+## A) Lab introduction
+
+### A1. About Delta Lake in a nutshell
 Delta Lake is an open source table format that brings relational database & warehouse like capabilities such as ACID transactions, CRUD operations, schema validation + enforcement + evolution & more to structured data assets in data lakes. Learn more at [delta.io](https://delta.io)
 
-## 1. About the lab
-This lab aims to demystify Delta Lake on Dataproc Serverless Spark on GCP, with a minimum viable sample of the core features of the table format on a Data Lake on Cloud Storage. The dataset leveraged is the Kaggle Lending Club loan dataset, and the lab features a set of nine Spark notebooks, each covering a feature or a set of features. The lab is fully scripted (no challenges) and is for pure instructional purpose. 
+### A2. About the lab
+This lab aims to demystify Delta Lake with Apache Spark on Cloud Dataproc, with a minimum viable sample of the core features of the table format on a Data Lake on Cloud Storage. The dataset leveraged is the Kaggle Lending Club loan dataset, and the lab features a set of nine Spark notebooks, each covering a feature or a set of features. The lab is fully scripted (no challenges) and is for pure instructional purpose. 
 
 <br>
 
-The lab includes Terraform automation for GCP environment provisioning. 
+The lab includes Terraform automation for GCP environment provisioning and detailed instructions including commands and configuration. 
 
-## 2. Delta Lake Lab
+### A3. Key products used in the lab
 
-### 2.1. Clone this repo
+1. Cloud IAM - User Managed Service Account creation, IAM roles
+2. Cloud Storage - raw data & notebook, Dataproc temp bucket and staging bucket
+3. Vertex AI Workbench - notebooks
+4. Dataproc Serverless Spark interactive - interactive Spark infrastructure fronted by Vertex AI managed notebooks
+
+### A4. Lab Flow
+![flow](./images/flow.png) 
+
+### A5. Goals
+1. Just enough knowledge of Delta Lake & its core capabilities
+2. Just enough knowledge of using Delta Lake with Dataproc Serverless Spark on GCP via Jupyter notebooks on Vertex AI Workbench managed notebooks
+3. Ability to demo Delta Lake on Dataproc Serverless Spark 
+4. Just enough Terraform for automating provisioning, that can be repurposed for your workloads
+
+### A6. Lab dataset
+
+### A7. Lab architecture
+
+
+### A8. Technology & Libraries
+1. Distributed computing engine -  Apache Spark (PySpark)
+2. Interactive notebooks - Jupyter
+
+### A9. Duration to run through the lab
+~ 90 minutes or less
+
+### A10. Lab format
+Fully scripted, with detailed instructions intended for learning, not necessarily challenging
+
+### A11. Credits
+
+| # | Google Cloud Collaborators | Contribution  | 
+| -- | :--- | :--- |
+| 1. | Anagha Khanolkar, Customer Engineer | Creator |
+
+### A12. Contributions welcome
+Community contribution to improve the lab is very much appreciated. <br>
+
+### A13. Getting help
+If you have any questions or if you found any problems with this repository, please report through GitHub issues.
+
+<hr>
+
+
+## B. Environment Provisioning
+
+### B1. Clone this repo
 
 ```
 cd ~
@@ -21,7 +69,7 @@ git clone https://github.com/anagha-google/table-format-lab-delta
 
 <hr>
 
-### 2.2. Declare Variables
+### B2. Declare Variables
 
 Modify the location variable to your preferred GCP region.
 
