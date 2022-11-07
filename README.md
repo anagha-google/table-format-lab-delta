@@ -16,43 +16,55 @@ The lab includes Terraform automation for GCP environment provisioning and detai
 
 1. Cloud IAM - User Managed Service Account creation, IAM roles
 2. Cloud Storage - raw data & notebook, Dataproc temp bucket and staging bucket
-3. Vertex AI Workbench - notebooks
+3. Vertex AI Workbench - managed (Jupyter) notebooks
 4. Dataproc Serverless Spark interactive - interactive Spark infrastructure fronted by Vertex AI managed notebooks
 
-### A4. Lab Flow
+
+### A4. Technology & Libraries
+1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.x (Dataproc Sercerless Spark version 2.0)
+2. Delta Lake - delta-core_2.13:2.1.0
+
+### A5. Lab architecture
+
+
+### A6. Lab Flow
 ![flow](./images/flow.png) 
 
-### A5. Goals
+
+### A7. Lab Use Case & Dataset
+
+#### Dataset:
+Kaggle Lending Club public dataset
+
+#### Use Case:
+Data engineering for Loan analysis
+
+### A8. Goals
 1. Just enough knowledge of Delta Lake & its core capabilities
 2. Just enough knowledge of using Delta Lake with Dataproc Serverless Spark on GCP via Jupyter notebooks on Vertex AI Workbench managed notebooks
 3. Ability to demo Delta Lake on Dataproc Serverless Spark 
 4. Just enough Terraform for automating provisioning, that can be repurposed for your workloads
 
-### A6. Lab dataset
-
-### A7. Lab architecture
-
-
-### A8. Technology & Libraries
-1. Distributed computing engine -  Apache Spark (PySpark)
-2. Interactive notebooks - Jupyter
 
 ### A9. Duration to run through the lab
 ~ 90 minutes or less
 
-### A10. Lab format
+### A10. Approximate cost
+< $100
+
+### A11. Lab format
 Fully scripted, with detailed instructions intended for learning, not necessarily challenging
 
-### A11. Credits
+### A12. Credits
 
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
 | 1. | Anagha Khanolkar, Customer Engineer | Creator |
 
-### A12. Contributions welcome
+### A13. Contributions welcome
 Community contribution to improve the lab is very much appreciated. <br>
 
-### A13. Getting help
+### A14. Getting help
 If you have any questions or if you found any problems with this repository, please report through GitHub issues.
 
 <hr>
