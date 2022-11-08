@@ -21,21 +21,22 @@ The lab includes Terraform automation for GCP environment provisioning and detai
 
 
 ### A4. Technology & Libraries
-1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.x (Dataproc Sercerless Spark version 2.0)
+1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.0 (Dataproc Serverless Spark version 2.0.0)
 2. Delta Lake - delta-core_2.13:2.1.0
 
 ### A5. Lab Architecture
 The lab architecture is as follows-
-
+![architecture](./images/architecture.png) 
 
 ### A6. Lab Flow
 ![flow](./images/flow.png) 
-
 
 ### A7. Lab Use Case & Dataset
 
 #### Dataset:
 Kaggle Lending Club public dataset
+
+![data](./images/data.png) 
 
 #### Use Case:
 Data engineering for Loan analysis
@@ -173,7 +174,7 @@ gcloud beta dataproc sessions create spark $SESSION_NAME-$RANDOM  \
 --property="spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension" \
 --property="spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog" \
 --service-account="dll-lab-sa@${PROJECT_ID}.iam.gserviceaccount.com" \
---version 2.0.0 \
+--version 2.0.2 \
 --subnet=$SUBNET 
 
 ```
