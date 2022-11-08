@@ -6,13 +6,19 @@
 Delta Lake is an open source table format that brings relational database & warehouse like capabilities such as ACID transactions, CRUD operations, schema validation + enforcement + evolution & more to structured data assets in data lakes. Learn more at [delta.io](https://delta.io)
 
 ### A2. About the lab
+
+#### Summary
 This lab aims to demystify Delta Lake with Apache Spark on Cloud Dataproc, with a minimum viable sample of the core features of the table format on a Data Lake on Cloud Storage. The dataset leveraged is the Kaggle Lending Club loan dataset, and the lab features a set of nine Spark notebooks, each covering a feature or a set of features. The lab is fully scripted (no challenges) and is for pure instructional purpose. 
 
-<br>
+#### Automation
 The lab includes Terraform automation for GCP environment provisioning and detailed instructions including commands and configuration. 
 
-<br>
+#### Features Covered
 Delta Lake Features covered:
+
+| # | Feature | Notebook |
+| -- | :--- | :--- |
+| 1. | Blah | Blah |
 
 
 ### A3. Key products used in the lab
@@ -259,9 +265,9 @@ echo "LOCATION=$LOCATION"
 
 <hr>
 
-### 2.3. Terraform Provisioning
+### B3. Terraform Provisioning
 
-#### 2.3.1. Enable Google APIs and Update Organization Policies
+#### B3.1. Enable Google APIs and Update Organization Policies
 
 ```
 cd ~/table-format-lab-delta/00-setup/org_policy
@@ -276,7 +282,7 @@ terraform apply \
 
 <hr>
 
-#### 2.3.2. Provision the lab resources
+#### B3.2. Provision the lab resources
 
 ```
 cd ~/table-format-lab-delta/00-setup/demo
@@ -304,7 +310,7 @@ terraform apply \
 
 <hr>
 
-### 2.4. Create an interactive Spark session
+### C. Create a Dataproc Interactive Spark Session
 
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
@@ -334,16 +340,15 @@ The author typcially has two sessions handly to expedite switching across notebo
 
 <hr>
 
-### 2.5. Connect to Vertex AI Workbench in the Cloud Console
+### D. Connect to Vertex AI Workbench in the Cloud Console
 
 The Terraform creates a Vertex AI Workbench managed notebook instance and loads the Delta Lake notebooks.
-Navigate into the managed notebook instance, open the first Delta Lake notebook, and pick a Spark kernel - the one created by #3 above.
+Navigate into the managed notebook instance, open the first Delta Lake notebook (DeltaLakeLab-1.ipynb), and pick a Spark kernel - the one created by #C above.
 
 <hr>
 
-### 2.6. Get started with the Delta Lake lab
-
-Delta Lake has a number of features. Only a subset has been covered in this lab. Over time, we will add more notebooks.<br>
+### E. Lab guide
+Note: The notebooks have scope and narratives defined in them, so there is no explicit lab guide for this lab.<br>
 
 Run through each notebook, sequentially.<br>
 Review the Delta Lake documentation at - <br>
@@ -351,29 +356,12 @@ https://docs.delta.io/latest/index.html <br>
 
 **Note:** Table clones are not yet availabe outside Databricks - https://github.com/delta-io/delta/issues/1387. Therefore, notebook 8, does not work, its been left as a placeholder.
 
-## 3. Dont forget to 
+## F. Dont forget to 
 Shut down/delete resources when done to avoid unnecessary billing.
 
 <hr>
 
-## 4. Credits
-| # | Google Cloud Collaborators | Contribution  | 
-| -- | :--- | :--- |
-| 1. | Anagha Khanolkar | Creator |
-
-<hr>
-
-## 5. Contributions welcome
-Community contribution to improve the lab is very much appreciated. <br>
-
-<hr>
-
-## 6. Getting help
-If you have any questions or if you found any problems with this repository, please report through GitHub issues.
-
-<hr>
-
-## 7. Release History
+## G. Release History
 
 | Date | Details | 
 | -- | :--- | 
