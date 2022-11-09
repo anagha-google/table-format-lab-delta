@@ -49,7 +49,7 @@ Kaggle Lending Club public dataset
 ##### Rows
 740,121
 
-##### Schema
+##### Raw Data Schema
 ```
 root
  |-- id: string (nullable = true)
@@ -191,6 +191,7 @@ root
  |-- issue_d: string (nullable = true)
 ```
 
+##### Curated data used in the lab
 ![data](./images/data.png) 
 
 ### A8. Lab Use Case:
