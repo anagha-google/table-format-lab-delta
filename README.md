@@ -35,8 +35,8 @@ Delta Lake Features covered in Spark notebooks:
 3. Dataproc Serverless Spark interactive - interactive Spark infrastructure fronted by Vertex AI managed notebooks
 
 ### A4. Technology & Libraries
-1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.0 (Dataproc Serverless Spark version 2.0.2)
-2. Delta Lake - delta-core_2.13:2.1.0
+1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.0<br>(Dataproc Serverless Spark version 2.0.2)
+2. Table format - Delta Lake (delta-core_2.13:2.1.0)
 
 ### A5. Lab Architecture
 The lab architecture is as follows-
