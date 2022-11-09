@@ -26,7 +26,12 @@ Delta Lake Features covered in Spark notebooks:
 | 6. | Time travel with Delta Lake | DeltaLakeLab-6.ipynb  |
 | 7. | a) Data skipping and <br> b) OPTIMIZE ZORDER in Delta Lake | DeltaLakeLab-7.ipynb  |
 | 8. | Table clone | DeltaLakeLab-8.ipynb  |
-| 9. | a) Table restore to point in time snapshot<br> b) Performance optimization with OPTIMIZE (bin packing)<br> c) Storage optimization with VACUUM | DeltaLakeLab-9.ipynb  |
+| 9. | a) Table restore to point in time snapshot<br> b) Performance optimization with OPTIMIZE (bin packing)<br> c) Storage optimization with VACUUM | DeltaLakeLab-9.ipynb  
+
+#### Complementary Assets for Googlers
+
+Slides: go/ts22-delta-lake-slides <br>
+Video: go/ts22-delta-lake-talk
 
 ### A3. Key products used in the lab
 
@@ -224,7 +229,6 @@ Fully scripted, with detailed instructions intended for learning, not necessaril
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
 | 1. | Anagha Khanolkar, Customer Engineer | Creator |
-
 
 
 ### A14. Contributions welcome
