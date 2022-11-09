@@ -23,10 +23,9 @@ Delta Lake Features covered:
 
 ### A3. Key products used in the lab
 
-1. Cloud IAM - User Managed Service Account creation, IAM roles
-2. Cloud Storage - raw data & notebook, Dataproc temp bucket and staging bucket
-3. Vertex AI Workbench - managed (Jupyter) notebooks
-4. Dataproc Serverless Spark interactive - interactive Spark infrastructure fronted by Vertex AI managed notebooks
+1. Cloud Storage - as data lake + storage for raw data & notebook, storage for Dataproc - temp bucket and staging bucket
+2. Vertex AI Workbench - managed (Jupyter) notebooks
+3. Dataproc Serverless Spark interactive - interactive Spark infrastructure fronted by Vertex AI managed notebooks
 
 ### A4. Technology & Libraries
 1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.0 (Dataproc Serverless Spark version 2.0.2)
