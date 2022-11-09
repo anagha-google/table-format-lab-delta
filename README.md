@@ -41,7 +41,8 @@ Video: go/ts22-delta-lake-talk
 
 ### A4. Technology & Libraries
 1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.0<br>(Dataproc Serverless Spark version 2.0.2)
-2. Table format - Delta Lake (delta-core_2.13:2.1.0)
+2. Flavor of Spark: PySpark
+3. Table format - Delta Lake (delta-core_2.13:2.1.0)
 
 ### A5. Lab Architecture
 The lab architecture is as follows-
