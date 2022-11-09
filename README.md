@@ -24,9 +24,9 @@ Delta Lake Features covered in Spark notebooks:
 | 4. | a) Delete a record and study the delta log<br> b) Insert a record and study the delta log<br> c) Update a record and study the delta log<br> c) Upsert to the table and study the delta log | DeltaLakeLab-4.ipynb  |
 | 5. | a) Schema validation & enforcement<br> b) Schema evolution  | DeltaLakeLab-5.ipynb  |
 | 6. | Time travel with Delta Lake | DeltaLakeLab-6.ipynb  |
-| 7. | a) Data skipping and <br> b) zorder in Delta Lake | DeltaLakeLab-7.ipynb  |
+| 7. | a) Data skipping and <br> b) OPTIMIZE ZORDER in Delta Lake | DeltaLakeLab-7.ipynb  |
 | 8. | Table clone | DeltaLakeLab-8.ipynb  |
-| 9. | a) Table restore to point in time snapshot<br> b) Performance optimization with OTIMIZE<br> c) Storage optimization with VACUUM | DeltaLakeLab-9.ipynb  |
+| 9. | a) Table restore to point in time snapshot<br> b) Performance optimization with OPTIMIZE (bin packing)<br> c) Storage optimization with VACUUM | DeltaLakeLab-9.ipynb  |
 
 ### A3. Key products used in the lab
 
