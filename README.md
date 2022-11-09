@@ -355,7 +355,7 @@ Navigate into the managed notebook instance, open the first Delta Lake notebook 
 <hr>
 
 ### E. Lab guide
-Note: The notebooks have scope and narratives defined in them, so there is no explicit lab guide for this lab.<br>
+Note: The notebooks have scope and narratives defined in them, so there is no explicit lab guide for this lab. The features of Delta Lake covered is listed [above](README.md#features-covered)<br>
 
 Run through each notebook, sequentially.<br>
 Review the Delta Lake documentation at - <br>
