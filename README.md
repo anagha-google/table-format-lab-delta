@@ -14,12 +14,19 @@ This lab aims to demystify Delta Lake with Apache Spark on Cloud Dataproc, with 
 The lab includes Terraform automation for GCP environment provisioning and detailed instructions including commands and configuration. 
 
 #### Features Covered
-Delta Lake Features covered:
+Delta Lake Features covered in Spark notebooks:
 
-| # | Feature | Notebook |
+| # | Feature/Step | Notebook |
 | -- | :--- | :--- |
-| 1. | Blah | Blah |
-
+| 1. | Created curated Parquet table off of CSV | DeltaLakeLab-1.ipynb |
+| 2. | a) Creating and persisting to Delta Lake tables from a Parquet based table<br>b) Partitioned and unpartitioned tables | DeltaLakeLab-2.ipynb  |
+| 3. | a) Review Delta table details<br>b) Review Delta table history<br>c) Create a manifest file<br>d) Review Hive metastore entries| DeltaLakeLab-3.ipynb  |
+| 4. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-4.ipynb  |
+| 5. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-5.ipynb  |
+| 6. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-6.ipynb  |
+| 7. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-7.ipynb  |
+| 8. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-8.ipynb  |
+| 9. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-9.ipynb  |
 
 ### A3. Key products used in the lab
 
