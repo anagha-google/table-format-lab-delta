@@ -18,15 +18,15 @@ Delta Lake Features covered in Spark notebooks:
 
 | # | Feature/Step | Notebook |
 | -- | :--- | :--- |
-| 1. | Created curated Parquet table off of CSV | DeltaLakeLab-1.ipynb |
-| 2. | a) Creating and persisting to Delta Lake tables from a Parquet based table<br>b) Partitioned and unpartitioned tables | DeltaLakeLab-2.ipynb  |
+| 1. | Created curated Parquet table off of CSV files in the data lake vacked by Cloud Storage | DeltaLakeLab-1.ipynb |
+| 2. | a) Create and persist to Delta Lake tables from a Parquet based table<br>b) Create partitioned and unpartitioned tables | DeltaLakeLab-2.ipynb  |
 | 3. | a) Review Delta table details<br>b) Review Delta table history<br>c) Create a manifest file<br>d) Review Hive metastore entries| DeltaLakeLab-3.ipynb  |
-| 4. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-4.ipynb  |
-| 5. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-5.ipynb  |
-| 6. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-6.ipynb  |
-| 7. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-7.ipynb  |
-| 8. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-8.ipynb  |
-| 9. | Creating and persisting to Delta Lake tables from a Parquet based table<br>Metastore, Metadata & Delta Log walkthrough | DeltaLakeLab-9.ipynb  |
+| 4. | a) Delete a record and study the delta log<br> b) Insert a record and study the delta log<br> c) Update a record and study the delta log<br> c) Upsert and study the delta log | DeltaLakeLab-4.ipynb  |
+| 5. |  | DeltaLakeLab-5.ipynb  |
+| 6. |  | DeltaLakeLab-6.ipynb  |
+| 7. |  | DeltaLakeLab-7.ipynb  |
+| 8. |  | DeltaLakeLab-8.ipynb  |
+| 9. |  | DeltaLakeLab-9.ipynb  |
 
 ### A3. Key products used in the lab
 
