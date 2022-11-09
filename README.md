@@ -14,23 +14,29 @@ This lab aims to demystify Delta Lake with Apache Spark on Cloud Dataproc, with 
 The lab includes Terraform automation for GCP environment provisioning and detailed instructions including commands and configuration. 
 
 #### Features Covered
-Delta Lake Features covered:
+Delta Lake Features covered in Spark notebooks:
 
-| # | Feature | Notebook |
+| # | Feature/Step | Notebook |
 | -- | :--- | :--- |
-| 1. | Blah | Blah |
-
+| 1. | Created curated Parquet table off of CSV files in the data lake vacked by Cloud Storage | DeltaLakeLab-1.ipynb |
+| 2. | a) Create and persist to Delta Lake tables from a Parquet based table<br>b) Create partitioned and unpartitioned tables | DeltaLakeLab-2.ipynb  |
+| 3. | a) Review Delta table details<br>b) Review Delta table history<br>c) Create a manifest file<br>d) Review Hive metastore entries| DeltaLakeLab-3.ipynb  |
+| 4. | a) Delete a record and study the delta log<br> b) Insert a record and study the delta log<br> c) Update a record and study the delta log<br> c) Upsert to the table and study the delta log | DeltaLakeLab-4.ipynb  |
+| 5. | a) Schema validation & enforcement<br> b) Schema evolution  | DeltaLakeLab-5.ipynb  |
+| 6. | Time travel with Delta Lake | DeltaLakeLab-6.ipynb  |
+| 7. | a) Data skipping and <br> b) zorder in Delta Lake | DeltaLakeLab-7.ipynb  |
+| 8. | Table clone | DeltaLakeLab-8.ipynb  |
+| 9. | a) Table restore to point in time snapshot<br> b) Performance optimization with OTIMIZE<br> c) Storage optimization with VACUUM | DeltaLakeLab-9.ipynb  |
 
 ### A3. Key products used in the lab
 
-1. Cloud IAM - User Managed Service Account creation, IAM roles
-2. Cloud Storage - raw data & notebook, Dataproc temp bucket and staging bucket
-3. Vertex AI Workbench - managed (Jupyter) notebooks
-4. Dataproc Serverless Spark interactive - interactive Spark infrastructure fronted by Vertex AI managed notebooks
+1. Cloud Storage - as data lake + storage for raw data & notebook, storage for Dataproc - temp bucket and staging bucket
+2. Vertex AI Workbench - managed (Jupyter) notebooks
+3. Dataproc Serverless Spark interactive - interactive Spark infrastructure fronted by Vertex AI managed notebooks
 
 ### A4. Technology & Libraries
-1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.0 (Dataproc Serverless Spark version 2.0.2)
-2. Delta Lake - delta-core_2.13:2.1.0
+1. Distributed computing engine -  Apache Spark (PySpark) version 3.3.0<br>(Dataproc Serverless Spark version 2.0.2)
+2. Table format - Delta Lake (delta-core_2.13:2.1.0)
 
 ### A5. Lab Architecture
 The lab architecture is as follows-
@@ -50,7 +56,7 @@ Kaggle Lending Club public dataset
 ##### Rows
 740,121
 
-##### Schema
+##### Raw Data Schema
 ```
 root
  |-- id: string (nullable = true)
@@ -192,6 +198,7 @@ root
  |-- issue_d: string (nullable = true)
 ```
 
+##### Curated data used in the lab
 ![data](./images/data.png) 
 
 ### A8. Lab Use Case:
@@ -348,7 +355,7 @@ Navigate into the managed notebook instance, open the first Delta Lake notebook 
 <hr>
 
 ### E. Lab guide
-Note: The notebooks have scope and narratives defined in them, so there is no explicit lab guide for this lab.<br>
+Note: The notebooks have scope and narratives defined in them, so there is no explicit lab guide for this lab. The features of Delta Lake covered is listed [above](README.md#features-covered)<br>
 
 Run through each notebook, sequentially.<br>
 Review the Delta Lake documentation at - <br>
