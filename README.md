@@ -317,7 +317,7 @@ terraform apply \
 
 <hr>
 
-### C. Create a Dataproc Interactive Spark Session
+## C. Create a Dataproc Interactive Spark Session
 
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
@@ -347,14 +347,14 @@ The author typcially has two sessions handly to expedite switching across notebo
 
 <hr>
 
-### D. Connect to Vertex AI Workbench in the Cloud Console
+## D. Connect to Vertex AI Workbench in the Cloud Console
 
 The Terraform creates a Vertex AI Workbench managed notebook instance and loads the Delta Lake notebooks.
 Navigate into the managed notebook instance, open the first Delta Lake notebook (DeltaLakeLab-1.ipynb), and pick a Spark kernel - the one created by #C above.
 
 <hr>
 
-### E. Lab guide
+## E. Lab guide
 Note: The notebooks have scope and narratives defined in them, so there is no explicit lab guide for this lab. The features of Delta Lake covered is listed [above](README.md#features-covered)<br>
 
 Run through each notebook, sequentially.<br>
