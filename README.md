@@ -48,6 +48,8 @@ Video: go/ts22-delta-lake-talk
 The lab architecture is as follows-
 ![architecture](./images/architecture.png) 
 
+Note: Due to storage limits in git, we have created parquet files that are a subset of the original CSV files. <br>
+
 About Dataproc Serverless Spark Interactive:<br>
 Fully managed, autoscalable, secure Spark infrastructure as a service for use with Jupyter notebooks on Vertex AI Workbench managed notebooks. Use as an interactive Spark IDE, for accelerating development and speed to production.
 
