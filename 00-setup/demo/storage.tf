@@ -64,8 +64,8 @@ resource "google_storage_bucket_object" "create_dir_in_gcs" {
 }
 
 resource "google_storage_bucket_object" "upload_source_data_to_data_bucket" {
-  for_each = fileset("./data/parquet-source/", "*")
-  source = "./data/parquet-source/${each.value}"
+  for_each = fileset("./data/", "*")
+  source = "./data/${each.value}"
   name = "parquet-source/${each.value}"
   bucket = "${local.data_bucket_nm}"
   depends_on = [
@@ -80,7 +80,7 @@ Customize managed notebook post-startup script
 
 resource "null_resource" "create_mnbs_post_startup_bash" {
     provisioner "local-exec" {
-        command = "cp ./templates/mnbs-exec-post-startup-template.sh ./code/mnbs-exec-post-startup.sh && sed -i s/YOUR_PROJECT_NBR/${local.project_nbr}/g ./code/mnbs-exec-post-startup.sh"
+        command = "cp ./templates/mnbs-exec-post-startup-template.sh ./code/mnbs-exec-post-startup.sh && sed -i  s/YOUR_PROJECT_NBR/${local.project_nbr}/g ./code/mnbs-exec-post-startup.sh"
     }
   depends_on = [
     google_storage_bucket.create_code_bucket

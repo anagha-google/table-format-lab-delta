@@ -39,3 +39,18 @@ variable "project_nbr" {
 variable "gcp_account_name" {
   type        = string
 }
+
+variable "biglake_location" {
+  type        = string
+  default     = "US"
+}
+
+variable "biglake_connection" {
+  type        = string
+  default     = "biglake-connection"
+}
+
+variable "bq_delta_ds" {
+  type        = string
+  default     = "delta_dataset"
+}
