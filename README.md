@@ -20,7 +20,7 @@ Delta Lake Features covered in Spark notebooks:
 | -- | :--- | :--- |
 | 1. | Create curated Parquet table off of CSV files in the data lake backed by Cloud Storage | DeltaLakeLab-1.ipynb |
 | 2. | a) Create and persist to Delta Lake tables from a Parquet based table<br>b) Create partitioned and unpartitioned tables | DeltaLakeLab-2.ipynb  |
-| 3. | a) Review Delta table details<br>b) Review Delta table history<br>c) Create a manifest file<br>d) Review Hive metastore entries| DeltaLakeLab-3.ipynb  |
+| 3. | a) Review Delta table details<br>b) Review Delta table history<br>c) Create a manifest file<br>d) Create a BigLake table with manifest support on the Delta Lake snapshot<br>e) Review Hive metastore entries| DeltaLakeLab-3.ipynb  |
 | 4. | a) Delete a record and study the delta log<br> b) Insert a record and study the delta log<br> c) Update a record and study the delta log<br> c) Upsert to the table and study the delta log | DeltaLakeLab-4.ipynb  |
 | 5. | a) Schema validation & enforcement<br> b) Schema evolution  | DeltaLakeLab-5.ipynb  |
 | 6. | Time travel with Delta Lake | DeltaLakeLab-6.ipynb  |
@@ -380,5 +380,6 @@ Shut down/delete resources when done to avoid unnecessary billing.
 
 | Date | Details | 
 | -- | :--- | 
+| 20231016 |  Notebook 3: Added BigLake table creation on manifest of point in time snapshot of DeltaLake  |
 | 20221022 |  Notebooks 1-9, + Terraform |
 
