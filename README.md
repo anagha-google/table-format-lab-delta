@@ -347,7 +347,6 @@ gcloud beta dataproc sessions create spark $SESSION_NAME-$RANDOM  \
 --property="spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension" \
 --property="spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog" \
 --service-account="dll-lab-sa@${PROJECT_ID}.iam.gserviceaccount.com" \
---version 2.0.2 \
 --subnet=$SUBNET 
 
 ```
