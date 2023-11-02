@@ -6,4 +6,6 @@
 #........................................................................
 
 gsutil cp gs://dll-code-bucket-YOUR_PROJECT_NBR/*.ipynb /home/jupyter/ 
-chown jupyter:jupyter /home/jupyter/* 
+gsutil cp -r gs://dll-code-bucket-YOUR_PROJECT_NBR/images /home/jupyter/ 
+chown jupyter:jupyter /home/jupyter/*
+chown jupyter:jupyter /home/jupyter/images/*

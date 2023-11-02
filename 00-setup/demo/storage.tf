@@ -80,7 +80,7 @@ Customize managed notebook post-startup script
 
 resource "null_resource" "create_mnbs_post_startup_bash" {
     provisioner "local-exec" {
-        command = "cp ./templates/mnbs-exec-post-startup-template.sh ./code/mnbs-exec-post-startup.sh && sed -i  s/YOUR_PROJECT_NBR/${local.project_nbr}/g ./code/mnbs-exec-post-startup.sh"
+        command = "cp ./templates/mnbs-exec-post-startup-template.sh ./code/mnbs-exec-post-startup.sh && sed -i   s/YOUR_PROJECT_NBR/${local.project_nbr}/g ./code/mnbs-exec-post-startup.sh"
     }
   depends_on = [
     google_storage_bucket.create_code_bucket
@@ -99,6 +99,18 @@ resource "google_storage_bucket_object" "upload_code_to_code_bucket" {
   depends_on = [time_sleep.sleep_after_bucket_creation,
                 null_resource.create_mnbs_post_startup_bash
   ]
+}
+
+/******************************************
+Copy Images to the code bucket
+******************************************/
+
+resource "google_storage_bucket_object" "upload_images_to_code_bucket" {
+  for_each = fileset("./code/images", "*")
+  source = "./code/images/${each.value}"
+  name = "images/${each.value}"
+  bucket = "${local.code_bucket_nm}"
+  depends_on = [google_storage_bucket_object.upload_code_to_code_bucket]
 }
 
 /*******************************************
