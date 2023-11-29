@@ -46,7 +46,8 @@ module "activate_service_apis" {
     "artifactregistry.googleapis.com",
     "metastore.googleapis.com",
     "servicenetworking.googleapis.com",
-    "iam.googleapis.com"
+    "iam.googleapis.com",
+    "biglake.googleapis.com"
 
     ]
 
