@@ -336,17 +336,20 @@ HISTORY_SERVER_NAME="dll-sphs-${PROJECT_NBR}"
 METASTORE_NAME="dll-hms-${PROJECT_NBR}"
 SUBNET="spark-snet"
 NOTEBOOK_BUCKET="gs://s8s_notebook_bucket-${PROJECT_NBR}"
+SERVERLESS_SPARK_RUNTIME=2.1
+DELTA_CORE_VERSION="io.delta:delta-core_2.13:2.4.0"
 
 
 gcloud beta dataproc sessions create spark $SESSION_NAME-$RANDOM  \
 --project=${PROJECT_ID} \
 --location=${LOCATION} \
---property=spark.jars.packages="io.delta:delta-core_2.13:2.1.0" \
+--property=spark.jars.packages=$DELTA_CORE_VERSION \
 --history-server-cluster="projects/$PROJECT_ID/regions/$LOCATION/clusters/${HISTORY_SERVER_NAME}" \
 --metastore-service="projects/$PROJECT_ID/locations/$LOCATION/services/${METASTORE_NAME}" \
 --property="spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension" \
 --property="spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog" \
 --service-account="dll-lab-sa@${PROJECT_ID}.iam.gserviceaccount.com" \
+--version=$SERVERLESS_SPARK_RUNTIME \
 --subnet=$SUBNET 
 
 ```
