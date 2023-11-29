@@ -32,6 +32,7 @@ resource "google_dataproc_cluster" "create_phs" {
   }
   depends_on = [
    time_sleep.sleep_after_network_resources_creation,
-   time_sleep.sleep_after_bucket_uploads
+   time_sleep.sleep_after_bucket_uploads,
+   time_sleep.sleep_after_iam_permissions_grants
   ]  
 }
