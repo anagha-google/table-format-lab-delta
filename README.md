@@ -232,7 +232,7 @@ Fully scripted, with detailed instructions intended for learning, not necessaril
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
 | 1. | Anagha Khanolkar, Customer Engineer | Vision, design and author of the lab modules |
-| 2. | Jay O' Leary, Customer Engineer | Contributed BigLake table defintion with Delta Lake manifest support to notebook 3 |
+| 2. | Jay O' Leary, Customer Engineer | Contributed BigLake with Delta Lake manifest support to notebook 3 & associated Terraform updates |
 
 ### A14. Contributions welcome
 Community contribution to improve the lab is very much appreciated. <br>
@@ -379,6 +379,7 @@ Shut down/delete resources when done to avoid unnecessary billing.
 
 | Date | Details | 
 | -- | :--- | 
-| 20231016 |  Notebook 3: Added BigLake table creation on manifest of point in time snapshot of DeltaLake  |
-| 20221022 |  Notebooks 1-9, + Terraform |
+| 20231129 |  Anagha Khanolkar -> BigLake metastore integration |
+| 20231016 |  Jay O'Leary -> Added BigLake table creation (notbook 3) on manifest of point in time snapshot of DeltaLake  |
+| 20221022 |  Anagha Khanolkar -> Notebooks 1-9, + Terraform |
 
