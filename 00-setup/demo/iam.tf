@@ -35,7 +35,8 @@ module "umsa_role_grants" {
     "roles/aiplatform.admin",
     "roles/aiplatform.viewer",
     "roles/aiplatform.user",
-    "roles/viewer"
+    "roles/viewer",
+    "roles/serviceusage.serviceUsageAdmin"
   ]
   depends_on = [
     module.umsa_creation
