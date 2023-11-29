@@ -232,7 +232,7 @@ Fully scripted, with detailed instructions intended for learning, not necessaril
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
 | 1. | Anagha Khanolkar, Customer Engineer | Vision, design and author of the lab modules |
-| 2. | Jay O' Leary, Customer Engineer | Contributed notebook on BLMS integration |
+| 2. | Jay O' Leary, Customer Engineer | Contributed BigLake table defintion with Delta Lake manifest support to notebook 3 |
 
 ### A14. Contributions welcome
 Community contribution to improve the lab is very much appreciated. <br>
