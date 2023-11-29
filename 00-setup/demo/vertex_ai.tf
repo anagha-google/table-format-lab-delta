@@ -35,6 +35,7 @@ resource "google_notebooks_runtime" "create_mnb_server" {
   }
   depends_on = [
     time_sleep.sleep_after_network_resources_creation,
+    time_sleep.sleep_after_iam_permissions_grants
     
   ]  
 }
