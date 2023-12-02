@@ -18,15 +18,16 @@ Delta Lake Features covered in Spark notebooks:
 
 | # | Feature/Step | Notebook |
 | -- | :--- | :--- |
-| 1. | Create curated Parquet table off of CSV files in the data lake backed by Cloud Storage | DeltaLakeLab-1.ipynb |
-| 2. | a) Create and persist to Delta Lake tables from a Parquet based table<br>b) Create partitioned and unpartitioned tables | DeltaLakeLab-2.ipynb  |
-| 3. | a) Review Delta table details<br>b) Review Delta table history<br>c) Create a manifest file<br>d) Create a BigLake table with manifest support on the Delta Lake snapshot<br>e) Review Hive metastore entries| DeltaLakeLab-3.ipynb  |
-| 4. | a) Delete a record and study the delta log<br> b) Insert a record and study the delta log<br> c) Update a record and study the delta log<br> c) Upsert to the table and study the delta log | DeltaLakeLab-4.ipynb  |
-| 5. | a) Schema validation & enforcement<br> b) Schema evolution  | DeltaLakeLab-5.ipynb  |
-| 6. | Time travel with Delta Lake | DeltaLakeLab-6.ipynb  |
-| 7. | a) Data skipping and <br> b) OPTIMIZE ZORDER in Delta Lake | DeltaLakeLab-7.ipynb  |
-| 8. | Table clone | DeltaLakeLab-8.ipynb  |
-| 9. | a) Table restore to point in time snapshot<br> b) Performance optimization with OPTIMIZE (bin packing)<br> c) Storage optimization with VACUUM | DeltaLakeLab-9.ipynb  
+| 1. | Create curated Parquet table off of CSV files in the data lake backed by Cloud Storage | DeltaLakeLab-01.ipynb |
+| 2. | a) Create and persist to Delta Lake tables from a Parquet based table<br>b) Create partitioned and unpartitioned tables | DeltaLakeLab-02.ipynb  |
+| 3. | a) Review Delta table details<br>b) Review Delta table history<br>c) Create a manifest file<br>d) Review Hive metastore entries| DeltaLakeLab-03.ipynb  |
+| 4. | a) Delete a record and study the delta log<br> b) Insert a record and study the delta log<br> c) Update a record and study the delta log<br> c) Upsert to the table and study the delta log | DeltaLakeLab-04.ipynb  |
+| 5. | a) Schema validation & enforcement<br> b) Schema evolution  | DeltaLakeLab-05.ipynb  |
+| 6. | Time travel with Delta Lake | DeltaLakeLab-06.ipynb  |
+| 7. | a) Data skipping and <br> b) OPTIMIZE ZORDER in Delta Lake | DeltaLakeLab-07.ipynb  |
+| 8. | Table clone | DeltaLakeLab-08.ipynb  |
+| 9. | a) Table restore to point in time snapshot<br> b) Performance optimization with OPTIMIZE (bin packing)<br> c) Storage optimization with VACUUM | DeltaLakeLab-09.ipynb |
+| 10. | Create a BigLake table on Delta Lake files in GCS using a manifest file | DeltaLakeLab-10.ipynb  |
 
 #### Complementary Assets for Googlers
 
@@ -232,7 +233,7 @@ Fully scripted, with detailed instructions intended for learning, not necessaril
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
 | 1. | Anagha Khanolkar, Customer Engineer | Vision, design and author of the lab modules |
-| 2. | Jay O' Leary, Customer Engineer | Contributed BigLake with Delta Lake manifest support to notebook 3 & associated Terraform updates |
+| 2. | Jay O' Leary, Customer Engineer | Contributed notebook 10 - BigLake with Delta Lake manifest support & associated Terraform updates |
 
 ### A14. Contributions welcome
 Community contribution to improve the lab is very much appreciated. <br>
