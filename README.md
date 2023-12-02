@@ -383,7 +383,7 @@ Shut down/delete resources when done to avoid unnecessary billing.
 
 | Date | Details | 
 | -- | :--- | 
-| 20231129 |  Anagha Khanolkar -> BigLake metastore integration |
-| 20231016 |  Jay O'Leary -> Added BigLake table creation (notbook 3) on manifest of point in time snapshot of DeltaLake  |
+| 20231202 |  Anagha Khanolkar -> UniForm and OneTable with BigLake Metastore for querying live Delta Lake tables from BigLake |
+| 20231016 |  Jay O'Leary -> Notebook 10 / BigLake on Delta Lake manifest file  |
 | 20221022 |  Anagha Khanolkar -> Notebooks 1-9, + Terraform |
 
