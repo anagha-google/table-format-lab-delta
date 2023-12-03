@@ -27,7 +27,7 @@ Delta Lake Features covered in Spark notebooks:
 | 7. | a) Data skipping and <br> b) OPTIMIZE ZORDER in Delta Lake | DeltaLakeLab-07.ipynb  |
 | 8. | Table clone | DeltaLakeLab-08.ipynb  |
 | 9. | a) Table restore to point in time snapshot<br> b) Performance optimization with OPTIMIZE (bin packing)<br> c) Storage optimization with VACUUM | DeltaLakeLab-09.ipynb |
-| 10. | Create a BigLake table on Delta Lake files in GCS using a manifest file | DeltaLakeLab-10.ipynb  |
+| 10. | Create BigLake tables on Delta Lake files in GCS using a manifest file | DeltaLakeLab-10.ipynb  |
 
 #### Complementary Assets for Googlers
 
