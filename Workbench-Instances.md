@@ -1,4 +1,4 @@
-# SWorkbench Instances Setup
+# Workbench Instances Setup
 
 ```
 # About:
