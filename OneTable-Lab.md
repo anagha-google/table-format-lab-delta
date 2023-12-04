@@ -28,9 +28,13 @@ The OneTable utility is available at-
 ls utilities/target/utilities-0.1.0-SNAPSHOT-bundled.jar
 ```
 
+<hr>
+
 ## 2. Copy the OnteTable utility jar to Cloud Shell
 
 In Cloud Shell, click on the 3 dots and then "Upload" and upload the jar.
+
+<hr>
 
 ## 3. Open Notebook 12 in the Vertex AI workbench after creating a Spark session & run through it in entirety
 
@@ -40,6 +44,8 @@ In this notebook, we will -
 3. Review the delta Lake table to use for the lab
 
 (https://github.com/anagha-google/table-format-lab-delta/blob/main/00-setup/demo/code/DeltaLakeLab-12.ipynb)
+
+<hr>
    
 ## 4. Create a BLMS catalog.yaml file in Cloud shell
 
@@ -63,6 +69,8 @@ catalogOptions:
 EOF
 ```
 
+<hr>
+
 ## 5. Create a dataset config yaml in Cloud Shell
 
 ```
@@ -79,6 +87,8 @@ datasets:
 EOF
 ```
 
+<hr>
+
 ## 6. Download the BigLake Iceberg jar to Cloud Shell
 
 ```
@@ -86,6 +96,8 @@ cd ~
 gsutil cp gs://spark-lib/biglake/biglake-catalog-iceberg1.2.0-0.1.0-with-dependencies.jar .
 ls *.jar
 ```
+
+<hr>
 
 ## 7. Execute OneTable utility in Cloud Shell
 
@@ -120,11 +132,16 @@ Exception in thread "main" java.lang.IllegalAccessError: class org.apache.spark.
         at io.onetable.utilities.RunSync.main(RunSync.java:171)
 ```
 
+<hr>
+
 ## 8. Switch to BigQuery UI and query the Delta Lake table with Iceberg metadata in BLMS
 
 TODO
+
+<hr>
 
 ## 9. What next?
 
 Each time you commit to the Delta Lake table, you need to run this utility for fresh data to be available via BigQuery. Consider running the sync utility to run as part of your data pipeline, immediately after Delta Lake table updates.
 
+<hr>
