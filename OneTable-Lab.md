@@ -38,6 +38,8 @@ In this notebook, we will -
 1. Create a Biglake Metastore catalog
 2. Create a Biglake Metastore database
 3. Review the delta Lake table to use for the lab
+
+(https://github.com/anagha-google/table-format-lab-delta/blob/main/00-setup/demo/code/DeltaLakeLab-12.ipynb)
    
 ## 4. Create a BLMS catalog.yaml file in Cloud shell
 
