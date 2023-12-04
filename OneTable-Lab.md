@@ -94,6 +94,32 @@ cd ~
 java -cp utilities-0.1.0-SNAPSHOT-bundled.jar:biglake-catalog-iceberg1.2.0-0.1.0-with-dependencies.jar  io.onetable.utilities.RunSync  --datasetConfig loans_dataset_config.yaml --icebergCatalogConfig blms_iceberg_catalog.yaml
 ```
 
+Error:
+```
+WARNING: Runtime environment or build system does not support multi-release JARs. This will impact location-based features.
+2023-12-04 04:38:35 INFO  io.onetable.utilities.RunSync:150 - Running sync for basePath gs://dll-data-bucket-11002190840/delta-consumable for following table formats [ICEBERG]
+2023-12-04 04:38:36 WARN  org.apache.hadoop.util.NativeCodeLoader:60 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Exception in thread "main" java.lang.IllegalAccessError: class org.apache.spark.storage.StorageUtils$ (in unnamed module @0x7f58dd03) cannot access class sun.nio.ch.DirectBuffer (in module java.base) because module java.base does not export sun.nio.ch to unnamed module @0x7f58dd03
+        at org.apache.spark.storage.StorageUtils$.<init>(StorageUtils.scala:213)
+        at org.apache.spark.storage.StorageUtils$.<clinit>(StorageUtils.scala)
+        at org.apache.spark.storage.BlockManagerMasterEndpoint.<init>(BlockManagerMasterEndpoint.scala:110)
+        at org.apache.spark.SparkEnv$.$anonfun$create$9(SparkEnv.scala:348)
+        at org.apache.spark.SparkEnv$.registerOrLookupEndpoint$1(SparkEnv.scala:287)
+        at org.apache.spark.SparkEnv$.create(SparkEnv.scala:336)
+        at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:191)
+        at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:277)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:460)
+        at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2690)
+        at org.apache.spark.sql.SparkSession$Builder.$anonfun$getOrCreate$2(SparkSession.scala:949)
+        at scala.Option.getOrElse(Option.scala:189)
+        at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:943)
+        at io.onetable.delta.DeltaClientUtils.buildSparkSession(DeltaClientUtils.java:47)
+        at io.onetable.delta.DeltaSourceClientProvider.getSourceClientInstance(DeltaSourceClientProvider.java:32)
+        at io.onetable.delta.DeltaSourceClientProvider.getSourceClientInstance(DeltaSourceClientProvider.java:29)
+        at io.onetable.client.OneTableClient.sync(OneTableClient.java:91)
+        at io.onetable.utilities.RunSync.main(RunSync.java:171)
+```
+
 ## 8. Switch to BigQuery UI and query the Delta Lake table with Iceberg metadata in BLMS
 
 TODO
