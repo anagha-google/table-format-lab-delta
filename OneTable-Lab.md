@@ -13,6 +13,7 @@ cd onetable
 
 Set your Java home to use Java 11
 ```
+# In the author's case.. edit to match yours
 /usr/libexec/java_home -V
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home/
 ```
