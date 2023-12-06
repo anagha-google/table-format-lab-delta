@@ -6,7 +6,8 @@ On your machine, with Java 11 installed, build OneTable from source as follows-
 
 Clone the OneTable repo
 ```
-cd ~
+mkdir -p ~/scratch/onetable-repo/
+cd onetable-repo
 git clone https://github.com/onetable-io/onetable.git
 cd onetable
 ```
@@ -25,14 +26,17 @@ mvn clean package -DskipTests
 
 The OneTable utility is available at-
 ```
-ls utilities/target/utilities-0.1.0-SNAPSHOT-bundled.jar
+ls ~/scratch/onetable-repo/onetable/utilities/target/utilities-0.1.0-SNAPSHOT-bundled.jar
 ```
 
 <hr>
 
-## 2. Copy the OnteTable utility jar to Cloud Shell
+## 2. Copy the OnteTable utility jar to a local directory on your machine
 
-In Cloud Shell, click on the 3 dots and then "Upload" and upload the jar.
+```
+mkdir -p ~/scratch/onetable-util/
+cp ~/scratch/onetable-repo/onetable/utilities/target/utilities-0.1.0-SNAPSHOT-bundled.jar ~/scratch/onetable-util/
+```
 
 <hr>
 
@@ -47,8 +51,16 @@ In this notebook, we will -
 
 <hr>
    
-## 4. Create a BLMS catalog.yaml file in Cloud shell
+## 4. Create a BLMS catalog.yaml file in Cloud shell on your machine
+Log onto Google Cloud on your machine, and configure project to be this project-
+```
+gcloud auth login
+gcloud config set project <YOUR_PROJECT_ID>
+```
 
+
+
+Then run the commands below locally
 ```
 ICEBERG_CATALOG_NM=loans_iceberg_catalog
 ICEBERG_DATASET_NM=loans_iceberg_dataset
@@ -58,8 +70,15 @@ PROJECT_NAME=`gcloud projects describe ${PROJECT_ID} | grep name | cut -d':' -f2
 LOCATION="us-central1"
 DELTA_LAKE_DIR="gs://dll-data-bucket-$PROJECT_NBR/delta-consumable"
 
-rm -rf ~/blms_iceberg_catalog.yaml
-tee ~/blms_iceberg_catalog.yaml <<EOF
+# Switch directory
+cd ~/scratch/onetable-util/
+
+
+# Create config
+rm -rf blms_iceberg_catalog.yaml
+touch blms_iceberg_catalog.yaml
+
+cat <<EOF >> blms_iceberg_catalog.yaml
 catalogImpl: org.apache.iceberg.gcp.biglake.BigLakeCatalog
 catalogName: $ICEBERG_CATALOG_NM
 catalogOptions:
@@ -67,6 +86,7 @@ catalogOptions:
   gcp_location: $LOCATION
   warehouse: $DELTA_LAKE_DIR
 EOF
+
 ```
 
 <hr>
@@ -74,8 +94,11 @@ EOF
 ## 5. Create a dataset config yaml in Cloud Shell
 
 ```
-rm -rf ~/loans_dataset_config.yaml
-tee ~/loans_dataset_config.yaml <<EOF
+
+cd ~/scratch/onetable-util/
+
+rm -rf loans_dataset_config.yaml
+tee loans_dataset_config.yaml <<EOF
 sourceFormat: DELTA
 targetFormats:
   - ICEBERG
@@ -92,7 +115,7 @@ EOF
 ## 6. Download the BigLake Iceberg jar to Cloud Shell
 
 ```
-cd ~
+
 gsutil cp gs://spark-lib/biglake/biglake-catalog-iceberg1.2.0-0.1.0-with-dependencies.jar .
 ls *.jar
 ```
@@ -102,7 +125,6 @@ ls *.jar
 ## 7. Execute OneTable utility in Cloud Shell
 
 ```
-cd ~
 java -cp utilities-0.1.0-SNAPSHOT-bundled.jar:biglake-catalog-iceberg1.2.0-0.1.0-with-dependencies.jar  io.onetable.utilities.RunSync  --datasetConfig loans_dataset_config.yaml --icebergCatalogConfig blms_iceberg_catalog.yaml
 ```
 
